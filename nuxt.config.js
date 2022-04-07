@@ -64,7 +64,7 @@ export default {
     ],
     server: {
       cors: {
-        origin: 'https://peek-beats.netlify.app/'
+        origin: 'https://peek-beats-front.herokuapp.com/'
       }
     }
   },
