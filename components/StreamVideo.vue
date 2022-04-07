@@ -13,7 +13,7 @@ export default {
     }
   },
   mounted () {
-    const peer = new Peer(undefined, {
+    const peer = new Peer('id', {
       path: '/peerjs',
       host: '/',
       port: 443
