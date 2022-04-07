@@ -22,7 +22,9 @@ export default {
     this.socket = this.$nuxtSocket({
       name: 'stream'
     })
-
+    this.socket.emit('hello', 'world', (response) => {
+      console.log(response) // "got it"
+    })
     console.log(`socket: ${this.socket}`)
     console.log(`peer: ${this.peer}`)
 
