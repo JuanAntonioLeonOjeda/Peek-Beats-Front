@@ -21,6 +21,10 @@ export default {
       name: 'stream'
     })
 
+    window.on('beforeunload', function () {
+      this.socket.close()
+    })
+
     if (this.$store.state.role === 'streamer') {
       navigator.mediaDevices.getUserMedia({
         video: true,
@@ -44,7 +48,6 @@ export default {
       if (this.$store.state.role === 'streamer') {
         const stream = this.$store.state.streamVideo
         connectToNewUser(userId, stream, peer)
-        console.log(peer)
       }
     })
   }
