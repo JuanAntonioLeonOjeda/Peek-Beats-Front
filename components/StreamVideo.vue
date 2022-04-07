@@ -21,6 +21,9 @@ export default {
       name: 'stream'
     })
 
+    console.log(`socket: ${this.socket}`)
+    console.log(`peer: ${this.peer}`)
+
     if (this.$store.state.role === 'streamer') {
       navigator.mediaDevices.getUserMedia({
         video: true,
