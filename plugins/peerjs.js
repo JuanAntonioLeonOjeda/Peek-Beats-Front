@@ -1,10 +1,6 @@
 import Vue from 'vue'
+import Peer from 'peerjs'
 
-let Peer = ''
-
-if (typeof navigator !== 'undefined') {
-  Peer = require('peerjs').default
-  Vue.use(Peer)
-}
+Vue.use(Peer)
 
 export default Peer

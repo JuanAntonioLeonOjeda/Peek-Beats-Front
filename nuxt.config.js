@@ -32,7 +32,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~plugins/vue-carousel-3d', ssr: false },
-    { src: '~plugins/peerjs.js', mode: 'server' }
+    { src: '~plugins/peerjs.js', mode: 'server', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
