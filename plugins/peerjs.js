@@ -1,5 +1,7 @@
-if (typeof navigator !== 'undefined') {
-  const Peer = require('peerjs').default
+let Peer = ''
 
+if (typeof navigator !== 'undefined') {
+  Peer = require('peerjs').default
 }
+
 export default Peer
