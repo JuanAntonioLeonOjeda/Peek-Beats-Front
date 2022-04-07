@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import Peer from 'peerjs'
 
 export default {
   name: 'StreamVideo',
