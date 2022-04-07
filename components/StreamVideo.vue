@@ -9,7 +9,7 @@ export default {
   name: 'StreamVideo',
   data () {
     return {
-
+      lastPeerId: ''
     }
   },
   mounted () {
@@ -41,9 +41,19 @@ export default {
     }
 
     peer.on('open', (id) => {
+      this.lastPeerId = id
       // eslint-disable-next-line no-console
       console.log(`myId: ${id}`)
       this.socket.emit('join-room', this.$route.params.id, id)
+    })
+
+    peer.on('disconnected', function () {
+      console.log('Connection Lost')
+
+      // Workaround for peer.reconnect deleting previous id
+      peer.id = this.lastPeerId
+      peer._lastServerId = this.lastPeerId
+      peer.reconnect()
     })
 
     this.socket.on('user-connected', (userId) => {

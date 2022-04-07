@@ -19,10 +19,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ],
-    script: [
-      { src: ' https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js' }
     ]
+    // script: [
+    //   { src: 'https://unpkg.com/peerjs@1.3.2/dist/peerjs.min.js' }
+    // ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -31,7 +31,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~plugins/vue-carousel-3d', ssr: false }
+    { src: '~plugins/vue-carousel-3d', ssr: false },
+    { src: '~plugins/peerjs.js', ssr: true }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
