@@ -14,15 +14,11 @@ export default {
     const peer = new Peer(undefined, {
       path: '/peerjs',
       host: '/',
-      port: 5000
+      port: 443
     })
 
     this.socket = this.$nuxtSocket({
       name: 'stream'
-    })
-
-    window.on('beforeunload', function () {
-      this.socket.close()
     })
 
     if (this.$store.state.role === 'streamer') {
