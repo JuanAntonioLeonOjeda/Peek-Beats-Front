@@ -21,7 +21,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
-      { src: 'https://unpkg.com/peerjs@1.3.2/dist/peerjs.min.js' }
+      { src: ' https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js' }
     ]
   },
 
